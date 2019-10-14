@@ -52,7 +52,7 @@ This format is also known as float or binary32. This format occupies 32 bits ( o
 * Exponent : 8 bits 
 * Mantissa (fraction) : 23 bits 
 
-This format can accurately represents number between 2<sup>-24</sup> and  2<sup>+24</sup> and all the numbers represented by 2<sup>n</sup>, where the value of n is in between -126 and +127.
+This format can accurately represent number between 2<sup>-24</sup> and  2<sup>+24</sup> and all the numbers represented by 2<sup>n</sup>, where the value of n is in between -126 and +127.
 
 However a number out of the given range above can also be stored on the cost of losing the precision. Eg. If we store a number 2<sup>24</sup> + 1, it actually stores as 2<sup>24</sup>.
 
@@ -66,7 +66,7 @@ This format is also known as double or binary64. This format is same as single p
 Hence the higher range can be represented accurately i.e. all the numbers between 2<sup>-53</sup> and  2<sup>+53</sup> and all the numbers represented by 2<sup>n</sup>, where the value of n is in between -1022 and +1023.
 
 ### Decimal floating-point format
-decimal32, decimal64, and decimal128 formats were added to IEEE 754 standard in year 2008. This format occupies 32, 64, and 128 bits in memory respectively. These formats were added to remove the rounding errors so that the numbers can be used by financial and tax computations. So, for instance, if we subtract 0.2 from 0.3, it is `0.3 - 0.2 = 0.09999999999999998` in case of precision floating point format and it is `0.3 - 0.2 = 0.01` in decimal floating point format.
+decimal32, decimal64, and decimal128 formats were added to IEEE 754 standard in year 2008. This format occupies 32, 64, and 128 bits in memory respectively. These formats were added to remove the rounding errors so that the numbers can be used by financial and tax computations. So, for instance, if we subtract 0.2 from 0.3, it is `0.3 - 0.2 = 0.09999999999999998` in case of precision floating point format and it is `0.3 - 0.2 = 0.1` in decimal floating point format.
 
 Significand and exponent in this format can be encoded in multiple ways as there is not any specific way defined in the standard itself, eg. [DPD (Densely Packed Decimal)](https://en.wikipedia.org/wiki/Densely_packed_decimal), and [BID (Binary Integer Decimal)](https://en.wikipedia.org/wiki/Binary_integer_decimal).
 
@@ -86,7 +86,7 @@ We can use above expression to represent 23 in binary format as follows;
 
 1 x 2<sup>4</sup> + 0 x 2<sup>3</sup> + 1 x 2<sup>2</sup> + 1 x 2<sup>1</sup> + 1 x 2<sup>0</sup>
 
-And the series of coefficient can be represented as `10111` in binary, where each digit represents the value of 1 bit. Maximum value that can be represent is `11111` i.e. 31. But as it takes at least 1 byte (8 bits) in memory to represent this number, the maximum number a byte can represent is 255.
+And the series of coefficient can be represented as `10111` in binary, where each digit represents the value of 1 bit. Maximum value that can be represented is `11111` i.e. 31. But as it takes at least 1 byte (8 bits) in memory to represent this number, the maximum number a byte can represent is 255.
 
 ### BigBit format
 
